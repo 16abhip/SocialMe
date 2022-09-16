@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- root of the asset folder(as mentioned in index.js) -->
     <link rel="stylesheet" href="/css/layout.css">
+    <%- style %>
     <title>
         <%= title %>
     </title>
@@ -16,5 +17,8 @@
     <%- body %>
 
     <%- include ('_footer');%>
+
+    <%- script %>
+
 </body>
 </html>

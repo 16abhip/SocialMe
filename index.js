@@ -1,10 +1,13 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const app = express();
 const port = 8000;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
 // use express router 
 // layout must be before routes
+app.use(cookieParser());
+app.use(express.urlencoded())
 app.use(express.static('./assets'));
 app.use(expressLayouts);
 // extract the style and scripts from the pages into the layout and place it in the head

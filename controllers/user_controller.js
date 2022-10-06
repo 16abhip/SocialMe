@@ -6,12 +6,20 @@ module.exports.profile = function(req, res){
 }
 // render signUp page
 module.exports.signUp = function(req, res){
+    if(req.isAuthenticated()){
+        return res.redirect('/user/profile');
+    }
     return res.render('user_sign_up',{
         title: 'SocialMe: Sign Up'
     });
 }
 //  render signIp page 
 module.exports.signIn = function(req, res){
+
+    if(req.isAuthenticated()){
+        return res.redirect('/user/profile');
+    }
+
     return res.render('user_sign_in',{
         title: 'SocialMe: Sign In'
     });
@@ -40,10 +48,20 @@ module.exports.create = function(req, res){
         }
     });
     
-}
+} 
 
 // sign in and create session for user
 
 module.exports.createSession = function(req, res){
-    // to do Later
+    return res.redirect('/');
+}
+
+module.exports.destroySession = function(req, res){
+    req.logout(function(err){
+        if(err){
+            console.log('Error in logout');
+            return; 
+        }
+    });
+    return res.redirect('/');
 }

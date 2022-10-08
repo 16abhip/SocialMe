@@ -1,6 +1,52 @@
-body{
+html,body{
     margin: 0;
-    #layout-main{
-        height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+    background-color: #EDEDED;
+
+    #container{
+        min-height: 100%;
+        position: relative;
+        #layout-main{
+            padding: 0px 15px;
+            padding-bottom: 150px;
+        }
     }
+    input[type="submit"] {
+        border: 1px solid #0A3D5B;
+        color: white;
+        padding: 5px 12px;
+        background: grey;
+        cursor: pointer;
+        border-radius: 3px;
+        text-transform: capitalize;
+        background-image: linear-gradient(0, #1b74e4, #1b74e4);
+    background-size: 0;
+    transition: .8s;
+    background-repeat: no-repeat;
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+    input:focus {
+        outline: none;
+    }
+    input:hover[type="submit"] 
+	{
+		background-size: 100%;
+        color: #fff;
+	}
+    input[type="text"]{
+        padding: 5px;
+        border-radius: 3px;
+        background-color: rgb(255, 255, 255);
+    }
+    input:hover[type="text"] 
+	{
+		background-color: rgb(169, 168, 168);
+        color: white;
+	}
+    a i{
+        text-decoration: none;
+        color: rgb(67, 49, 49);
+    }
+    
 }

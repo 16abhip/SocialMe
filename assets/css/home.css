@@ -1,10 +1,44 @@
 #home-container {
-  display: flex; }
+  display: flex;
+  font-size: 1.2rem; }
+  #home-container ul {
+    list-style-type: none;
+    /* Remove bullets */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margins */ }
   #home-container #feed-posts {
     width: 70%;
-    padding: 10px; }
+    border-right: 5px solid white;
+    padding: 0px 15px; }
+    #home-container #feed-posts #posts-list-container #post-inside {
+      color: #100720;
+      width: 60%;
+      background-color: white;
+      margin: 20px;
+      border-radius: 10px;
+      border: 1px solid grey;
+      padding: 10px; }
+      #home-container #feed-posts #posts-list-container #post-inside #post-content {
+        padding: 5px;
+        margin: 10px 0px;
+        border-bottom: 1px solid black; }
+    #home-container #feed-posts #new-post-form textarea {
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      resize: none; }
   #home-container #user-friends {
     width: 30%;
-    padding: 10px;
-    border-left: 5px solid #7D6E83;
-    height: 100vh; }
+    padding: 0px 10px;
+    height: 100%; }
+    #home-container #user-friends a {
+      padding: 10px;
+      text-decoration: none;
+      color: #414040;
+      border-radius: 10px; }
+    #home-container #user-friends a:hover {
+      background-color: white; }

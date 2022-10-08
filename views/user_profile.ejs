@@ -3,7 +3,7 @@
 
     <p><%= profile_user.name %></p>
     <p><%= profile_user.email %></p>
-
+    <h3>Edit Details</h3>
     <% if (user.id == profile_user.id){ %>
         <!-- if user matches -->
         <form action="/user/update/<%= profile_user.id %>" method="post">

@@ -1,14 +1,22 @@
-<footer>
-    <h3>SocialME</h3>
-    <ul>
-        <li>
-            <a href="/">HOME</a>
-        </li>
-        <li>
-            <a href="/user/profile">Profile</a>
-        </li>
-        <li>
-            <a href="#">About Us</a>
-        </li>
-    </ul>
+<footer id="layout-footer">
+    <div>
+        <p>
+            SocialME. All Rights Reserved
+        </p>
+    </div>
+
+    <div>
+        <nav class="footer-nav">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <% if(locals.user) { %>
+                <li>
+                    <a href="/user/profile/<%=user.id%>">Profile</a>
+                </li>
+                <% } %>
+            </ul>
+        </nav>
+    </div>
 </footer>

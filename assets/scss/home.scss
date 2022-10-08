@@ -1,13 +1,51 @@
 #home-container{
+    ul {
+        list-style-type: none; /* Remove bullets */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margins */
+      }
     display: flex;
+    font-size: 1.2rem;
     #feed-posts{
         width: 70%;
-        padding: 10px;
+        border-right: 5px solid rgb(255, 255, 255);
+        padding: 0px 15px;
+        #posts-list-container #post-inside {
+            color: #100720;
+            width: 60%;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            border: 1px solid grey;
+            padding: 10px;
+            #post-content{
+                padding: 5px;
+                margin: 10px 0px;
+                border-bottom: 1px solid black;
+            }
+        }
+
+        #new-post-form textarea {
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            resize: none;
+          }
     }
     #user-friends{
         width: 30%;
-        padding: 10px;
-        border-left: 5px solid #7D6E83;
-        height: 100vh;
+        padding: 0px 10px;
+        height: 100%;
+        a{
+            padding: 10px;
+            text-decoration: none;
+            color: rgb(65, 64, 64);
+            border-radius: 10px;
+        }
+        a:hover{
+            background-color: white;
+        }
     }
 }

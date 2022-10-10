@@ -1,6 +1,6 @@
 const Post = require('../models/post');
 const User = require('../models/user');
-module.exports.home = function(req, res){
+module.exports.home = async function(req, res){
     // Post.find({}, function(err, posts){
     //     return res.render('home', {
     //         title: 'SocialMe | Home',
@@ -9,25 +9,32 @@ module.exports.home = function(req, res){
     // });
 
     // populate the user of each post
-    Post.find({})
+    try{
+        let posts = await Post.find({})
     .populate('user')
     .populate({
         path: 'comment', 
         populate: {
             path: 'user' // as mutlyple model is populated
         }
-    })
-    .exec(function(err,posts){
-        User.find({}, function(err ,user){
-            return res.render('home', {
-                title: 'SocialME | Home', 
-                posts: posts, 
-                all_user: user
-            });
-        });
-    })
+    });
+    let user = await User.find({});
+
+    
+    return res.render('home', {
+        title: 'SocialME | Home', 
+        posts: posts, 
+        all_user: user
+    });
+
+    }catch(err){
+        console.log('Error',err );
+        return;
+    }
+    
+    
 
 }
 
 
-// module.exports.actionName = fun(req, res){};p
+// module.exports.actionName = fun(req, res){};

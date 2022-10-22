@@ -1,0 +1,12 @@
+img {
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 49px;
+  height: 300px;
+  width: 300px; }
+
+input {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 7px;
+  margin-top: 4px; }

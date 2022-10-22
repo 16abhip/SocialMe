@@ -8,7 +8,7 @@
       <textarea
         name="content"
         cols="50"
-        rows="5"
+        rows="10"
         placeholder="Whats on your mind, <%= user.name %>?"
       ></textarea>
       <input type="submit" value="Add to your Post" />
@@ -23,13 +23,21 @@
       </ul>
     </div>
   </section>
+  <div id="m-f">
 
-  <section id="user-friends">
-    <h3>Contacts</h3>
-    <% for(u of all_user) { %>
-    <p>
-      <a href="/user/profile/<%= u.id %>"><%= u.name %></a>
-    </p>
-    <% } %>
-  </section>
+    <div id="user-friends">
+      <h3>Users</h3>
+      <% for(u of all_user) { %>
+      <p>
+        <a href="/user/profile/<%= u.id %>"><%= u.name %></a>
+      </p>
+      <% } %>
+    </div>
+    <div class="meme">
+        <button class="meme-btn">Click Me?</button>
+        <br>
+        <img src="" alt="">
+        <h6></h6>
+    </div>
+    
 </div>

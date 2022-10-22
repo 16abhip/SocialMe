@@ -4,6 +4,10 @@
     <title>
         <%= title %>
     </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,16 +23,52 @@
 <body>
     <div id="container">
         <%- include ('_header');%>
-        <% if(flash.success && flash.success.length > 0) { %>
-            <h5>
-                <%= flash.success %>
-            </h5>
-        <% } %>
         <main id="layout-main">
             <%- body %>
         </main>
         <%- include ('_footer');%>
     </div>
     <%- script %>
+    <script>
+        
+        <% if(flash.success && flash.success.length > 0) { %>
+                new Noty({
+                    theme: 'relax',
+                    text: "<%= flash.success %>" , 
+                    type: 'success', 
+                    layout: 'topRight', 
+                    timeout: 1200
+                }).show();
+        <% } %> 
+
+        <% if(flash.error && flash.error.length > 0) { %>
+            new Noty({
+                theme: 'relax',
+                text: "<%= flash.error %>" , 
+                type: 'error', 
+                layout: 'topRight', 
+                timeout: 1200
+            }).show();
+    <% } %> 
+    
+    const generateMemeBTN = document.querySelector(".meme .meme-btn");
+    const memeImage = document.querySelector(".meme  img");
+    const authormeme = document.querySelector(".meme h6");
+    const updateurl = (url, author) => {
+        memeImage.setAttribute("src", url);
+        authormeme.innerHTML = author;
+
+    };
+    const genrateMeme = () => {
+        fetch("https://meme-api.herokuapp.com/gimme")
+        .then((response) => response.json())
+        .then(data => {
+            updateurl(data.url, data.author)
+        });  
+    };
+
+    generateMemeBTN.addEventListener("click", genrateMeme);
+    genrateMeme();
+    </script>
 </body>
 </html>

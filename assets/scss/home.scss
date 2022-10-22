@@ -8,20 +8,31 @@
     font-size: 1.2rem;
     #feed-posts{
         width: 70%;
-        border-right: 5px solid rgb(255, 255, 255);
+        // border-right: 5px solid rgb(255, 255, 255);
         padding: 0px 15px;
         #posts-list-container #post-inside {
-            color: #100720;
-            width: 50%;
-            background-color: white;
-            margin: 20px;
+            position: relative;
+            left: 30%;
+            width: 40%;
+            // background-color: white;
+            box-shadow: 4px 3px 8px 1px #969696;
+  	        -webkit-box-shadow: 4px 3px 8px 1px #969696;
+            margin-top: 30px;
+            margin-bottom: 30px;
             border-radius: 10px;
             border: 1px solid grey;
             padding: 10px;
+            background-color: #52524E;
+            background-color: #2E2B2B;
+            background-image: url(https://media1.giphy.com/media/W64EqB0L6DSJINe9um/giphy.gif?cid=ecf05e475ux1hqoadt57s2ieaxyxb0wz1xr4w97ttu5t97pg&rid=giphy.gif&ct=g);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: rgb(238, 231, 231);
+            font-weight: 900;
             #post-content{
                 padding: 5px;
                 margin: 10px 0px;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid rgb(248, 194, 194);
             }
         }
 
@@ -32,20 +43,64 @@
             border-radius: 4px;
             font-size: 16px;
             resize: none;
+            box-shadow: 4px 3px 8px 1px #969696;
+  	        -webkit-box-shadow: 4px 3px 8px 1px #969696;
+            // background-color: #A1C298;
+            background-image: url(https://media1.giphy.com/media/r3liXXQxXOyJi/giphy.gif?cid=ecf05e47wqp1uhhw5w6tr0o6s7adguhzojc8xw3s4y8vagkr&rid=giphy.gif&ct=g);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: purple;
+            font-weight: 900;
           }
     }
+    #m-f{
+        display: flex;
+        flex-direction: column;
+    }
+    
     #user-friends{
-        width: 30%;
+        background-image: url(https://media2.giphy.com/media/l2JhA0r8XLFIVFmxy/giphy.gif?cid=ecf05e47v9vcn5umbgvkc4femdc5a3oqait586trqzzk93d2&rid=giphy.gif&ct=g);
+        background-repeat: no-repeat;
+        background-size:cover;
+        color: aliceblue;
+        width: 400px;
+        border-radius: 10px;
+        margin: 87px 0px;
         padding: 0px 10px;
-        height: 100%;
+        // height: 100%;
         a{
             padding: 10px;
             text-decoration: none;
             color: rgb(65, 64, 64);
+            color: rgb(221, 221, 221);
             border-radius: 10px;
         }
         a:hover{
             background-color: white;
+            box-shadow: 4px 3px 8px 1px #969696;
+  	        -webkit-box-shadow: 4px 3px 8px 1px #969696;
+            background-color: purple;
         }
+    }
+    .meme{
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 0px 100px 0px;
+    border-radius: 10px;
+
+            text-align: center;
+           button{
+            background-color: #1b74e4;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 2px;
+
+           }
+        img{
+            height: 350px;
+            width: 350px;
+        background-color: #2E2B2B;
+        border-radius: 10px;
+        }
+        
     }
 }

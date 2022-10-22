@@ -23,6 +23,8 @@ app.use(sassMiddleWare({
 app.use(cookieParser());
 app.use(express.urlencoded())
 app.use(express.static('./assets'));
+// make the upload path avail 
+app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use(expressLayouts);
 // extract the style and scripts from the pages into the layout and place it in the head
 app.set('layout extractStyles', true);

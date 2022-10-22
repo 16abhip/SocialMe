@@ -3,9 +3,17 @@ header{
     padding: 3px 5px;
     // background-color: #f6f7f7;
     background-color: #3b5998;
+    background-image: url(https://media2.giphy.com/media/DS89v1NqpzCqA/giphy.gif?cid=ecf05e47gnu6o9rteexs7tdw30e4x5wz975wjw5p98h0wa2r&rid=giphy.gif&ct=g);
+    background-size: contain;
+    background-repeat: no-repeat;
     color: #1b74e4;
+    background-color: white;
+    background-color: #ffffff;
+
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     justify-content: space-between;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 3px 7px;
     h2{
         margin: 9px;
     }
@@ -13,6 +21,8 @@ header{
         text-decoration: none;
         // color: #1b74e4;
         color: white;
+    color: #1b74e4;
+
     }
     ul{
         display: flex;

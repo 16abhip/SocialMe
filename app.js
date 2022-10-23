@@ -53,10 +53,11 @@ app.use(customMware.setFlash);
 app.use('/', require('./routes/index'));
 
 
-app.listen(port, function(err){
-    if(err){
-        console.log('Error in running server ', err);
-        return;
-    }
-    console.log('Server is running Port: ', port);
-});
+// app.listen(port, function(err){
+//     if(err){
+//         console.log('Error in running server ', err);
+//         return;
+//     }
+//     console.log('Server is running Port: ', port);
+// });
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))

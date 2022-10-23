@@ -1,5 +1,5 @@
 {
-  "name": "socialme", 
+  "name": "socialme",
   "version": "1.0.0",
   "description": "Social Media Web Application",
   "main": "index.js",
@@ -13,7 +13,7 @@
   "author": "Abhishek Singh",
   "license": "ISC",
   "engines": {
-    "node": "16.14.2", 
+    "node": "16.14.2",
     "npm": "8.5.0"
   },
   "dependencies": {
@@ -32,7 +32,8 @@
     "multer": "^1.4.5-lts.1",
     "node-sass-middleware": "^1.0.1",
     "passport": "^0.6.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2"

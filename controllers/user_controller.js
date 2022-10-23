@@ -26,10 +26,6 @@ module.exports.update = async function(req, res){
                 user.name = req.body.name;
                 user.email = req.body.email;
                 if(req.file){
-                    if(user.avatar){
-                        fs.unlinkSync(path.join(__dirname, '..', user.avatar));
-                    }
-                    // saving the path
                     user.avatar = User.avatarPath + '/' + req.file.filename;
                 }
                 user.save();

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/socialme_development');
+mongoose.connect('mongodb+srv://16_abhip:0361@cluster0.kektciz.mongodb.net/socialme_development');
 
 const db = mongoose.connection;
 db.on('error', function(){

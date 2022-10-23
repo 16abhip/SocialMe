@@ -1,4 +1,5 @@
 const express = require('express');
+const { Passport } = require('passport');
 const router = express.Router();
 const passport = require('passport');
 const userController = require('../controllers/user_controller');
@@ -14,4 +15,8 @@ router.post('/create-session', passport.authenticate(
     {failureRedirect: '/user/sign-in'},
 ) ,userController.createSession);
 router.get('/sign-out', userController.destroySession);
+
+router.get('/auth/google', passport.authenticate('google', {scope: ['profile', 'email']}));
+router.get('/auth/google/callback', passport.authenticate('google', {failureRedirect: '/user/sign-in'}), userController.createSession);
+
 module.exports = router;

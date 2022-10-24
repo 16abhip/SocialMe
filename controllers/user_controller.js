@@ -84,8 +84,7 @@ module.exports.create = function(req, res){
             return res.redirect('back');
         }
     });
-    
-} 
+}
 
 // sign in and create session for user
 

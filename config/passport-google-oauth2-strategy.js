@@ -7,7 +7,7 @@ const User = require('../models/user');
 passport.use(new googleStrategy({
     clientID: "443746268568-e3o8s18g5ihch97ahq67rfsfeu79eho0.apps.googleusercontent.com", 
     clientSecret: "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", 
-    callbackURL: "https://meisyes.herokuapp.com/user/auth/google/callback"
+    callbackURL: "https://socialme-tn63.onrender.com/user/auth/google/callback"
     },
     function(accessToken, refreshToken, profile, done){
         User.findOne({email: profile.emails[0].value}).exec(function(err, user){
